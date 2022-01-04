@@ -1,0 +1,108 @@
+.team{
+    padding: 10rem 0;
+    
+    &-info{
+        margin-top: 3rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 47rem);
+    }
+
+    &-list{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-item{
+        width: calc(33.33% - 3rem);
+    }
+
+    &-name{
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 1.4;
+        @include textClamp
+    }
+
+    &-position{
+        display: inline-block;
+        font-style: italic;
+        margin-top: auto;
+        color: $text-color;
+    }
+
+    &-image{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &-image{
+        height: 47rem;
+        width: 100%;
+    }
+
+    &-social{
+        display: flex;
+        &-item{
+            width: 25%;
+            background-color: $secondary-color;
+            color: white;
+            a{
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                color: $primary-color;
+                padding: 2rem;
+                font-size: 2rem;
+                transition: 0.25s all linear;
+            }
+
+            &:not(:first-child){
+                border-left: 1px $primary-color solid;
+            }
+
+            :hover{
+                background-color: $primary-color;
+                color: white;
+            }
+        }
+    }
+
+    @include maxWidth(1023px){
+        padding: 5rem 0;
+        &-list{
+            min-width: 100%;
+            max-height: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            flex-wrap: nowrap;
+            scroll-snap-type: x mandatory;
+            scroll-snap-stop: always;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+
+        &-item{
+            min-width: 55%;
+            scroll-snap-align: center;
+            &:not(:last-child){
+                margin-right: 2rem;
+            }
+        }
+
+    }
+    @include maxWidth(767px){
+        &-item{
+            min-width: 85%;
+        }
+
+    }
+
+}
+
+@include hoverEffect(".team-main", ".team-content")

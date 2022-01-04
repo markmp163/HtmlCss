@@ -1,0 +1,89 @@
+.quote{
+    background-color: $gray-color;
+
+    &-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-content{
+        display: flex;
+        align-items: center;
+        padding: 5.5rem 5.5rem;
+    }
+
+    &-arrow{
+        color: $gray-dark-color;
+        font-size: 4rem;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        font-weight: 300;
+    }
+
+    &-icon{
+        width: 15rem;
+        height: 15rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px $third-color solid;
+        flex-shrink: 0;
+    }
+
+    &-info{
+        padding-left: 6rem;
+    }
+
+    &-desc{
+        font-size: 2.4rem;
+        line-height: 1.6;
+        @include textClamp(3);
+        color: $text-color;
+    }
+
+    &-author{
+        font-family: $third-font;
+        font-size: 2.5rem;
+        padding-left: 8rem;
+        position: relative;
+        &::before{
+            content: "";
+            @include absoluteCenter("top");
+            height: 4px;
+            width: 6rem;
+            background-color: $primary-color;
+            left: 0;
+        }
+    }
+
+    @include maxWidth(767px){
+        
+        &-icon{
+            height: 10rem;
+            width: 10rem;
+            img{
+                width: 50%;
+            }
+        }
+
+        &-arrow{
+            display: none;
+        }
+
+        &-content{
+            padding: 3rem 0;
+            flex-direction: column;
+        }
+
+        &-info{
+            padding: 0;
+        }
+
+        &-desc{
+            margin-top: 1rem;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+    }
+}

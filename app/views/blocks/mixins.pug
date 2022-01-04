@@ -1,0 +1,41 @@
+mixin menuLink(title, href = '#')
+    li.header-menu-item 
+        a.header-menu-link(href= href)= title 
+
+mixin headerBottomItem(number, title)
+    .header-bottom-item 
+        span.header-bottom-number= number
+        span.header-bottom-text= title
+
+mixin blockHeader(caption, title, desc)
+    .block-header
+        h3.block-header-caption= caption
+        h2.block-header-heading= title
+        if desc 
+            p.block-header-desc= desc
+
+mixin aboutItem(href = "#", iconClass, title = "Default title", alt = "")
+    .about-item 
+        img.about-imange(src= href, alt= alt)
+        .about-content 
+            i.about-icon(class= iconClass)
+            span.about-title= title 
+mixin numberItem(number = "00", text = "Default text")
+    .number-item 
+        h4.number-item-count= number
+        span.number-item-text= text
+
+mixin serviceItem(iconClass, title = "Default title", desc = "default desc")
+    .service-item 
+        i.service-item-icon(class= iconClass)
+        .service-item-info
+            h3.service-item-title= title 
+            p.service-item-desc= desc
+
+mixin wedoItem(src, title, iconClass, desc, active = "")
+    .wedo-item(class= active)
+        .wedo-item-header 
+            img(src= src).wedo-item-icon
+            h3.wedo-item-title= title 
+            i.wedo-item-arrow(class = iconClass)
+        .wedo-item-content= desc

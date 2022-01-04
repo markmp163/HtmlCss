@@ -1,0 +1,46 @@
+.work{
+    padding: 10rem 0;
+
+    .container{
+        padding-bottom: 5rem;
+    }
+
+    &-blocks {
+        display: flex;
+    }
+    &-block{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-item{
+        width: 50%;
+    }
+
+    .xx{
+        width: 50%;
+        .work-item{
+            width: 100%;
+        }
+    }
+
+    &-content{
+        color: white;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    &-title{
+        margin-top: 1.2rem;
+        font-weight: 500;
+    }
+
+    @include maxWidth(767px){
+        &-content{
+            font-size: 1rem;
+        }
+    }
+}
+
+@include hoverEffect(".work-item", ".work-content")

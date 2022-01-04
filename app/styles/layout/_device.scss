@@ -1,0 +1,13 @@
+.device{
+    padding-top: 11rem;
+    background: linear-gradient(to bottom, rgba(white, 0.8), rgba(white, 0.8)),
+    url("https://www.creativefabrica.com/wp-content/uploads/2020/08/24/Forest-background-Graphics-5087914-1-1-580x376.jpg") no-repeat center / cover;
+    
+
+    
+    &-image{
+        display: inline-block;
+        margin-bottom: -7.5%;
+        @include absoluteCenter("left", relative)
+    }
+}
