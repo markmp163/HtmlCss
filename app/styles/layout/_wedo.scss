@@ -82,7 +82,7 @@
     }
 
     @include maxWidth(767px){
-        padding: 5rem 0rem;
+        padding: 3rem 0rem;
         &-container{
             flex-wrap: wrap;
         }
@@ -94,5 +94,6 @@
         &-content{
             width: 100%;
         }
+        
     }
 }

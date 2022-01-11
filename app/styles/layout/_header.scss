@@ -1,62 +1,62 @@
-.header{
+.header {
     min-height: 100rem;
-    background: linear-gradient(to bottom, rgba($primary-color, 0.8), rgba($secondary-color, 0.8)), 
+    background: linear-gradient(to bottom, rgba($primary-color, 0.8), rgba($secondary-color, 0.8)),
         url("../../images/img-header-bg.jpg") no-repeat center / cover;
     color: white;
-    &-top{
+    &-top {
         padding-top: 3rem;
         display: flex;
         align-items: baseline;
         justify-content: space-between;
     }
 
-    &-logo{
+    &-logo {
         font-size: 3rem;
         font-weight: bold;
         color: white;
     }
 
-    &-toggle{
+    &-toggle {
         display: none;
         font-size: 2rem;
         cursor: pointer;
     }
 
-    &-menu-link{
+    &-menu-link {
         color: white;
         text-transform: uppercase;
         display: inline-block;
         padding-bottom: 1rem;
         border-bottom: 4px solid transparent;
         transition: 0.25s all linear;
-        &:hover{
+        &:hover {
             border-bottom: 4px solid $secondary-color;
             color: $secondary-color;
         }
     }
 
-    &-menu-icon{
+    &-menu-icon {
         color: white;
     }
 
-    &-menu{
+    &-menu {
         display: flex;
     }
 
-    &-content{
+    &-content {
         padding-top: 17rem;
         text-align: center;
         color: white;
         max-width: 80rem;
         margin: 0 auto;
 
-        &-caption{
+        &-caption {
             font-size: 7.2rem;
             font-family: $third-font;
             margin-bottom: 3rem;
         }
 
-        &-main{
+        &-main {
             font-size: 15rem;
             font-weight: 800;
             text-transform: uppercase;
@@ -64,7 +64,7 @@
             padding-bottom: 7rem;
             margin-bottom: 5rem;
             position: relative;
-            &::after{
+            &::after {
                 content: "";
                 bottom: 0;
                 @include absoluteCenter("left");
@@ -73,7 +73,7 @@
             }
         }
 
-        &-more{
+        &-more {
             color: white;
             text-transform: uppercase;
             padding: 1rem 3rem;
@@ -83,14 +83,14 @@
         }
     }
 
-    &-bottom{
+    &-bottom {
         color: white;
         margin-top: 15.5rem;
         padding-bottom: 2.5rem;
         display: flex;
         flex-wrap: wrap;
-        
-        &-item{
+
+        &-item {
             border-top: 5px solid white;
             width: calc(25% - 30px);
             margin-left: 30px;
@@ -100,9 +100,9 @@
             cursor: pointer;
             transition: all 0.25s linear;
         }
-        &-item.is-active{
+        &-item.is-active {
             opacity: 1;
-            &::before{
+            &::before {
                 content: "";
                 position: absolute;
                 background-color: $primary-color;
@@ -114,103 +114,105 @@
             }
         }
 
-        &-text{
+        &-text {
             text-transform: uppercase;
             font-size: 1.8rem;
         }
 
-        &-number{
+        &-number {
             font-weight: bold;
             font-size: 2.4rem;
             margin-right: 10px;
         }
     }
-    
+
     @media screen and (max-width: 1023px) {
         min-height: unset;
-        .header-bottom{
+        .header-bottom {
             margin-top: 10.5rem;
         }
-        .header-content{
+        .header-content {
             padding-top: 10rem;
         }
-        .header-content-main{
+        .header-content-main {
             font-size: 10rem;
         }
-        
     }
 
     @media screen and (min-width: 768px) {
-        &-menu-item:not(:first-child){
+        &-menu-item:not(:first-child) {
             margin-left: 5rem;
         }
     }
 
     @media screen and (max-width: 767px) {
-        &-menu{
+        &-menu {
             position: fixed;
             right: 0;
             top: 0;
             bottom: 0;
-            width: 300px;
-            background-color: $primary-color;
+            width: 150px;
+            background: linear-gradient(to right, #0F2027, #203A43);
             display: block;
             padding: 20px;
             z-index: 10;
             transform: translateX(100%);
 
-            &-link{
-                &:hover{
+            &-link {
+                color: $primary-color;
+                &:hover {
                     border-color: transparent;
                 }
             }
 
-            &-item{
+            &-item {
                 padding: 1rem;
                 margin: 0;
             }
 
-            &-icon{
+            &-icon {
                 display: inline-block;
                 margin-bottom: 1rem;
+                color: $primary-color;
             }
         }
 
-        &-toggle{
+        &-toggle {
             display: inline-block;
             align-self: center;
         }
 
-        &-menu.is-expent{
+        &-menu.is-expand {
             transform: translateX(0);
             transition: all 0.25s linear;
+            font-weight: 600;
         }
 
-        .header-content{
-            &-caption{
+        .header-content {
+            &-caption {
                 font-size: 3rem;
                 margin-bottom: 1rem;
             }
-            &-main{
+            &-main {
                 font-size: 5rem;
                 margin-bottom: 3rem;
                 padding-bottom: 3rem;
             }
         }
 
-        .header-bottom{
-            &-item.is-active::before{
+        .header-bottom {
+            &-item.is-active::before {
                 width: 35%;
             }
 
-            &-item{
+            &-item {
                 text-align: center;
             }
 
-            &-text{
+            &-text {
                 display: none;
             }
-            &-number{
+            &-number {
                 margin-left: 25%;
             }
         }

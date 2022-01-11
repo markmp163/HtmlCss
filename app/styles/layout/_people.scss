@@ -1,0 +1,73 @@
+.people{
+    padding: 10rem 0;
+    background: linear-gradient(to bottom, rgba(white, 0.8), rgba(white, 0.8)),
+        url("https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg") no-repeat center / cover;
+
+    &-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &-item{
+        width: calc(50% - 3rem);
+        display: flex;
+        padding: 2rem;
+    }
+
+    &-image{
+        height: 10rem;
+        width: 10rem;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 2rem;
+    }
+
+    &-name{
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 1.6;
+        padding-bottom: 0.5rem;
+        font-size: 1.6rem;
+    }
+
+    &-job{
+        font-style: italic;
+        font-size: 1.5rem;
+        font-weight: lighter;
+        text-transform: capitalize;
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            height: 0.3rem;
+            width: 5rem;
+            background-color: $primary-color;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &-desc{
+        line-height: 1.5;
+        font-style: italic;
+        font-size: 1.2rem;
+    }
+
+    @include maxWidth(1023px){
+        &-item{
+            width: 50%;
+        }
+    }
+
+    @include maxWidth(767px){
+        padding: 3rem  0;
+
+        &-item{
+            width: 100%;
+        }
+
+    }
+}

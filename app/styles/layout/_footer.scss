@@ -1,0 +1,202 @@
+.footer {
+    padding: 10rem 0 0;
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        margin-left: -3.5rem;
+    }
+
+    &-contact {
+        flex: 3.5;
+        margin-left: 3.5rem;
+    }
+
+    &-contact-title {
+        font-size: 5rem;
+        color: $text-color;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+
+    &-desc {
+        line-height: 1.6;
+        text-align: justify;
+        margin-bottom: 3rem;
+        font-size: 1.6rem;
+        color: $text-color;
+    }
+
+    &-follower {
+        & > strong {
+            font-weight: bold;
+            padding-right: 0.5rem;
+            font-size: 1.6rem;
+        }
+
+        & > span {
+            font-size: 1.6rem;
+        }
+        margin-bottom: 2rem;
+    }
+
+    &-social {
+        border-top: 1px solid rgba(204, 204, 204, 0.4);
+        padding-top: 2rem;
+        font-size: 1.6rem;
+
+        & > span {
+            color: $text-color;
+            font-style: italic;
+            margin-right: 1rem;
+        }
+
+        & > i {
+            padding: 0 0.5rem;
+            color: $third-color;
+        }
+    }
+
+    &-subscribe {
+        margin-top: 3rem;
+        display: flex;
+    }
+
+    &-email {
+        height: 4rem;
+        border-radius: 0;
+        border: 1px solid #ccc;
+        outline: none;
+        padding: 1rem;
+        color: $text-color;
+        font-style: italic;
+    }
+
+    &-email-btn {
+        height: 4rem;
+        border-radius: 0;
+        padding: 0 2.5rem;
+        border: none;
+        background-color: $third-color;
+        text-transform: uppercase;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    &-title {
+        font-size: 3rem;
+        font-weight: bold;
+        color: $title-color;
+        margin-bottom: 3rem;
+    }
+
+    &-blog {
+        flex: 3;
+        margin-left: 3.5rem;
+
+        &-info {
+            padding: 2rem;
+        }
+
+        &-image {
+            width: 35%;
+            object-fit: cover;
+            height: 8em;
+        }
+
+        &-name {
+            text-transform: uppercase;
+            color: $title-color;
+            @include textClamp(2);
+            font-weight: bold;
+            line-height: 1.4;
+            font-size: 1.6rem;
+        }
+
+        &-calender {
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            font-style: italic;
+        }
+    }
+
+    &-blog-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        align-items: center;
+    }
+
+    &-insta {
+        flex: 2.5;
+        margin-left: 3.5rem;
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &-image {
+            width: calc(33.33% - 0.1rem);
+            margin-left: 0.1rem;
+            margin-bottom: 1px;
+            padding-bottom: 33.33%;
+            position: relative;
+            & > img {
+                position: absolute;
+                height: 100%;
+            }
+        }
+
+        &-more {
+            margin-top: 2rem;
+            font-size: 1.6rem;
+            font-style: italic;
+            cursor: pointer;
+        }
+    }
+
+    &-bottom {
+        margin-top: 8rem;
+        text-align: center;
+        font-size: 1.6rem;
+        padding: 2rem;
+        border-top: 1px solid rgba(204, 204, 204, 0.4);
+        font-weight: bold;
+
+        & > span {
+            color: $primary-color;
+            cursor: pointer;
+        }
+    }
+
+    @include maxWidth(1023px) {
+        &-content {
+            flex-direction: column;
+            padding-right: 3.5rem;
+        }
+
+        &-content-item {
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+    }
+
+    @include maxWidth(767px) {
+        &-bottom {
+            margin-top: 5rem;
+            & > span {
+                display: inline-block;
+                line-height: 1.6;
+            }
+        }
+
+        &-title {
+            font-size: 2.5rem;
+        }
+
+        padding-top: 5rem;
+    }
+}

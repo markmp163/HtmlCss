@@ -1,6 +1,6 @@
-@mixin size($width, $height: $width){
+@mixin size($width, $height: $width) {
     width: $width;
-    height: $height
+    height: $height;
 }
 
 @mixin absoluteCenter($direction: "left", $position: absolute) {
@@ -34,24 +34,24 @@
     }
 }
 
-@mixin textClamp($row: 1, $size: 100%){
+@mixin textClamp($row: 1, $size: 100%) {
     display: -webkit-box;
-        -webkit-line-clamp: $row;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: $size;
-        max-width: $size;
-        white-space: pre-wrap;
-        word-break: break-all;
+    -webkit-line-clamp: $row;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: $size;
+    max-width: $size;
+    white-space: pre-wrap;
+    word-break: break-all;
 }
 
-@mixin hoverEffect($itemClass, $contentClass, $isTranform: ""){
-    #{$itemClass}{
+@mixin hoverEffect($itemClass, $contentClass, $isTranform: "") {
+    #{$itemClass} {
         position: relative;
         z-index: 1;
         transition: all 0.25s linear;
-        #{$contentClass}{
+        #{$contentClass} {
             opacity: 0;
             visibility: hidden;
             position: absolute;
@@ -60,17 +60,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                to bottom,
-                rgba($primary-color, 0.8),
-                rgba($secondary-color, 0.8));
+            background: linear-gradient(to bottom, rgba($primary-color, 0.8), rgba($secondary-color, 0.8));
             z-index: 2;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
         }
-        &::after{
+        &::after {
             content: "";
             position: absolute;
             width: 100%;
@@ -81,18 +78,23 @@
             left: 0;
             z-index: -1;
         }
-        
-        &:hover{
-            #{$contentClass}{
+
+        &:hover {
+            #{$contentClass} {
                 opacity: 1;
                 visibility: visible;
             }
             @if $isTranform == "transform" {
                 transform: translate(-1rem, -1rem);
-                &::after{
+                &::after {
                     transform: translate(1rem, 1rem);
                 }
             }
         }
     }
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
 }

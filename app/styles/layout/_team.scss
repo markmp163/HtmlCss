@@ -103,6 +103,10 @@
 
     }
 
+    @include maxWidth(767px){
+        padding: 3rem  0;
+    }
+
 }
 
 @include hoverEffect(".team-main", ".team-content")

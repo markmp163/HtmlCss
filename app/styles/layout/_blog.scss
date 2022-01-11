@@ -1,0 +1,97 @@
+.blog {
+    padding: 10rem 0;
+
+    &-list {
+        display: flex;
+        margin-left: -3rem;
+    }
+
+    &-item {
+        margin-left: 3rem;
+    }
+
+    &-image {
+        position: relative;
+        text-align: center;
+        &-calendar {
+            position: absolute;
+            bottom: 1rem;
+            left: -1rem;
+            background-color: $third-color;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            color: white;
+            line-height: 1.5;
+            h4 {
+                font-weight: bold;
+                font-size: 1.7rem;
+            }
+        }
+    }
+
+    &-title {
+        padding: 1.5rem 0 1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.6rem;
+    }
+
+    &-desc {
+        line-height: 1.5rem;
+        text-align: justify;
+        color: $text-color;
+        margin-bottom: 2rem;
+    }
+
+    &-interactive {
+        color: $third-color;
+        font-size: 1.3rem;
+        & > i {
+            margin-right: 1rem;
+        }
+
+        & > span {
+            margin-right: 2rem;
+        }
+    }
+
+    @include maxWidth(767px) {
+        padding: 3rem 0;
+
+        &-list {
+            flex-direction: column;
+        }
+
+        &-item {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+.map {
+    background: linear-gradient(to bottom, rgba(white, 0.8), rgba(white, 0.8)),
+        url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/BlankMap-World_gray.svg/1280px-BlankMap-World_gray.svg.png")
+            no-repeat center / cover;
+    text-align: center;
+    padding: 7rem 0;
+    color: $primary-color;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    & > h2 {
+        padding: 2rem 0 2.5rem;
+        position: relative;
+        cursor: pointer;
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: $primary-color;
+            height: 0.4rem;
+            width: 10rem;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

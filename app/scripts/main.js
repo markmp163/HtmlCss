@@ -15,3 +15,22 @@
 //     ],
 //   });
 // });
+
+//
+
+document.getElementsByClassName("header-toggle")[0].onclick = () => {
+	document
+		.getElementsByClassName("header-menu")[0]
+		.classList.add("is-expand");
+};
+
+window.addEventListener("click", (e) => {
+	if (
+		!document.getElementsByClassName("header-menu")[0].contains(e.target) &&
+		!e.target.matches(".header-toggle")
+	) {
+		document
+			.getElementsByClassName("header-menu")[0]
+			.classList.remove("is-expand");
+	}
+});

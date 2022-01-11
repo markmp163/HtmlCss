@@ -1,46 +1,57 @@
-.work{
-    padding: 10rem 0;
+.work {
+    padding: 10rem 0 0;
 
-    .container{
+    .container {
         padding-bottom: 5rem;
     }
 
     &-blocks {
         display: flex;
     }
-    &-block{
+    &-block {
         width: 50%;
         display: flex;
         flex-wrap: wrap;
     }
 
-    &-item{
+    &-item {
         width: 50%;
     }
 
-    .xx{
+    .xx {
         width: 50%;
-        .work-item{
+        .work-item {
             width: 100%;
         }
     }
 
-    &-content{
+    &-content {
         color: white;
         font-size: 2rem;
         text-transform: uppercase;
     }
 
-    &-title{
+    &-title {
         margin-top: 1.2rem;
         font-weight: 500;
     }
 
-    @include maxWidth(767px){
-        &-content{
+    @include maxWidth(767px) {
+        &-content {
             font-size: 1rem;
+        }
+    }
+    @include maxWidth(767px) {
+        padding: 3rem 0 0;
+        &-blocks {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-block {
+            width: 100%;
         }
     }
 }
 
-@include hoverEffect(".work-item", ".work-content")
+@include hoverEffect(".work-item", ".work-content");
